@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd"
+    version="2.5">
+
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>checkout</servlet-name>
+  	<display-name>checkout</display-name>
+  	<description></description>
+  	<servlet-class>net.tutorial.djomeda.iwallet.konohashop.servlet.checkout</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>receivecallback</servlet-name>
+  	<display-name>receivecallback</display-name>
+  	<description></description>
+  	<servlet-class>net.tutorial.djomeda.iwallet.konohashop.servlet.receivecallback</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>checkout</servlet-name>
+  	<url-pattern>/checkout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>receivecallback</servlet-name>
+  	<url-pattern>/receivecallback</url-pattern>
+  </servlet-mapping>
+</web-app>
