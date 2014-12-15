@@ -82,7 +82,7 @@ public class receivecallback extends HttpServlet {
 			
 		OrderResult trueStatusOfPayment = iwalletIntegrator.verifyMobilePayment(orderId);
 		
-		if(!trueStatusOfPayment.isSuccess()) {
+		if(trueStatusOfPayment.isSuccess()) {
 				dbLayer.updateOrder(orderId, transactionId, paymentStatus);
 				//do another process like initiate shipping and email and sms notification
 				iwalletIntegrator.confirmTransaction(paymentToken, transactionId);
