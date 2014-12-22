@@ -7,6 +7,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>konohashop Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+          <cxf.version>2.7.3</cxf.version>
+        <slf4j.version>1.6.6</slf4j.version>
+        <logback.version>1.0.7</logback.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -41,6 +47,33 @@
    <artifactId>iwallet-java-connector</artifactId>
    <version>1.0.1</version>
 </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
 </dependencies>
   <build>
     <finalName>konohashop</finalName>
